@@ -21,7 +21,7 @@
             </nav>
         </div>
         <div class="header__fon">
-            <h1 class="header__h1">Цветы для вашего дома</h1>
+            <h1 class="header__big">Цветы для вашего дома</h1>
             <pre class="header__text">
 Растения в капшо станут красивым и 
 модным дополнением для вашей 
@@ -29,5 +29,42 @@
             <button class="header__btn">Перейти в каталог</button>
         </div>
     </header>
+    <section class="center">
+        <h2 class="header__special">Специальные предложения</h2>
+        <div class="homeplant">
+            <script>
+                const plants = [
+                    {
+                        img: "images/cart1.png",
+                        name: "Фикусы",
+                        text: "Эффектные украшения интерьера"
+                    },
+                    {
+                        img: "images/cart2.png",
+                        name: "Суккуленты",
+                        text: "Маленькие и модные"
+
+                    },
+                    {
+                        img: "images/cart3.png",
+                        name: "Пальмы",
+                        text: "Элегантный предмет декора"
+                    }
+                ]
+
+                const container = document.getElementsByClassName("homeplant")[0];
+                
+                plants.forEach(plant => {
+                    container.innerHTML += `
+                    <div class="plant">
+                        <img src="${plant.img}" alt="${plant.name}">
+                        <h3 class="plant__name">${plant.name}</h3>
+                        <p class="plant__text">${plant.text}</p>
+                    </div>
+                    `
+                });
+            </script> 
+        </div>
+    </section>
 </body>
 </html>
