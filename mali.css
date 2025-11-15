@@ -61,9 +61,10 @@
 .header__text{
     padding-left: 88px;
     padding-top: 12px;
+    margin-bottom: 12px;
 }
 
-.header__btn{
+/*.header__btn{
     margin-left: 88px;
     margin-top: 12px;
     background: rgba(217, 217, 217, 1);  
@@ -76,7 +77,7 @@
 .header__btn:hover{
     background-color: rgb(122, 174, 122);
     color: white;
-}
+}*/
 
 .header__special{
     color: rgba(0, 0, 0, 1);
@@ -121,4 +122,67 @@
     letter-spacing: 0%;
     text-align: left;
     padding-top: 5px;
+}
+
+.header__link{
+    margin-left: 89px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.header__link:hover{
+    color: rgba(217, 217, 217, 1);
+    text-decoration: underline; 
+}
+
+@media (max-width: 1024px){
+    .header{
+        height: 353px;
+        padding-left: calc(50% - 393px);
+        padding-right: calc(50% - 393px);
+        margin-bottom: 64px;
+    }
+}
+
+@media (max-width: 767px){
+    .header{
+        height: 363px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header__special{
+        padding-top: 124px;
+    }
+
+    .header__big{
+        text-align: center;
+    }
+
+    .header__nav{
+        display: flex;
+        margin-top: 23px;
+        flex-wrap: wrap; /* переносить ссылки на следующую строку при необходимости */
+        justify-content: center; /* выравнивание по центру */
+        gap: 10px; /* промежутки между ссылками */
+        padding: 10px 0; /* внутренние отступы */
+        background-color: #f8f8f8; /* фон, чтобы было красиво */
+    }
+    .header__nav a {
+        text-decoration: none; /* убрать подчеркивание */
+        color: #333; /* цвет текста */
+        font-size: 14px; /* размер шрифта */
+        padding: 8px 12px; /* внутренние отступы для удобства */
+        border-radius: 4px; /* скругление углов */
+        transition: background-color 0.3s; /* плавное изменение фона при наведении */
+    }
+
+    .header__nav a:hover {
+        background-color: #ddd; /* цвет фона при наведении */
+    }
 }
