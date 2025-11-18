@@ -67,39 +67,10 @@
                     container.appendChild(plantDiv);
                 });
             </script>
-            <!--<script>
-                const plants = [
-                    {
-                        img: "images/cart1.png",
-                        name: "Фикусы",
-                        text: "Эффектные украшения интерьера"
-                    },
-                    {
-                        img: "images/cart2.png",
-                        name: "Суккуленты",
-                        text: "Маленькие и модные"
-
-                    },
-                    {
-                        img: "images/cart3.png",
-                        name: "Пальмы",
-                        text: "Элегантный предмет декора"
-                    }
-                ]
-
-                const container = document.getElementsByClassName("homeplant")[0];
-                
-                plants.forEach(plant => {
-                    container.innerHTML += `
-                    <div class="plant">
-                        <img src="${plant.img}" alt="${plant.name}">
-                        <h3 class="plant__name">${plant.name}</h3>
-                        <p class="plant__text">${plant.text}</p>
-                    </div>
-                    `
-                });
-            </script> -->
         </div>
     </section>
+    <h2>Каталог товаров</h2>
+
+    <?php include 'inddex.php'; ?>
 </body>
 </html>
