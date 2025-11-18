@@ -140,6 +140,61 @@
     text-decoration: underline; 
 }
 
+.content{
+    width: 1150px;
+    margin: auto;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    width: 23%;
+    height: 450px;
+    margin-bottom: 30px;
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.card img{
+    width: 264px;
+    height: 290px;
+}
+
+.cardTitle{
+    font-size: 28px;
+    width: 190px;
+}
+
+.cardPrice{
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    bottom: 0;
+    font-size: 20px;
+}
+
+.cardButton{
+    width: 120px;
+    height: 40px;
+    background-color: rgba(43, 115, 43, 0.579);
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    border: 0;
+    border-radius: 15px;
+}
+
+.cardButton:hover{
+    cursor: pointer;
+    background-color: rgb(43, 115, 43);
+    color: rgb(215, 215, 215);
+}
+
 @media (max-width: 1024px){
     .header{
         height: 353px;
