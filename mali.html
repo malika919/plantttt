@@ -31,28 +31,30 @@
     </header>
     <section class="center">
         <h2 class="header__special">Специальные предложения</h2>
-        <div class="homeplant">
-            <script>
-                 const plants = [
-                    {
-                        img: "images/cart1.png",
-                        name: "Фикусы",
-                        text: "Эффектные украшения интерьера"
-                    },
-                    {
-                        img: "images/cart2.png",
-                        name: "Суккуленты",
-                        text: "Маленькие и модные"
+        <div class="homeplant"></div>
+    </section>
+    <script>
+            const plants = [
+                {
+                    img: "images/cart1.png",
+                    name: "Фикусы",
+                    text: "Эффектные украшения интерьера"
+                },
+                {
+                    img: "images/cart2.png",
+                    name: "Суккуленты",
+                    text: "Маленькие и модные"
 
-                    },
-                    {
-                        img: "images/cart3.png",
-                        name: "Пальмы",
-                        text: "Элегантный предмет декора"
-                    }
-                ]
+                },
+                {
+                    img: "images/cart3.png",
+                    name: "Пальмы",
+                    text: "Элегантный предмет декора"
+                }
+                
+            ]
 
-                const container = document.querySelector(".homeplant");
+            const container = document.querySelector(".homeplant");
                 
                 plants.forEach((plant) => {
                     const plantDiv = document.createElement('div');
@@ -65,13 +67,42 @@
                     `
                     container.appendChild(plantDiv);
                 });
-            </script>
-        </div>
+        </script>
+    <section class="adviceofplant">
+        <h2>Советы по уходу</h2>
+        <div class="adviceplant"></div> 
     </section>
-    <h2>Каталог товаров</h2>
-    <!--анжела, добавь код-->
+         <script>
+            const advices = [
+                {
+                    img: "images/cart1.jpg",
+                    name: "Фикусы",
+                    text: "Фикус — теплолюбивое растение, от сквозняков может сбросить листву. Не стоит ставить горшок на холодный подоконник или пол."
+                },
+                {
+                    img: "images/cart2.jpg",
+                    name: "Суккулент микс D5 H8-10",
+                    text: "В осенне-зимний период суккуленты поливают примерно 1 раз в 2 недели. Если температура достигает 13–15 градусов, то полив осуществляется 1 раз в месяц."
+                },
+                {
+                    img: "images/cart3.jpg",
+                    name: "Пальмы",
+                    text: "Резкое изменение освещения может вызвать стресс у растения, поэтому рекомендуется постепенно адаптировать пальму к новым условиям."
+                }
+            ];
+            const container1 = document.querySelector('.adviceplant');
 
-
+            advices.forEach((advice) => {
+                const adviceDiv = document.createElement('div');
+                adviceDiv.className = 'advice';
+                adviceDiv.innerHTML = `
+                    <img src="${advice.img}" alt="${advice.name}">
+                    <h3 class="advice__name">${advice.name}</h3>
+                    <p class="advice__text">${advice.text}</p>
+                `;
+                container1.appendChild(adviceDiv);
+            });
+        </script>
     <footer class="footer center">
         <div class="footer_top">
             <nav class="footer_menu">
